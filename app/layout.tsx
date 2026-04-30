@@ -96,17 +96,6 @@ export const metadata: Metadata = {
     },
   },
 
-  // ─── Icons ──────────────────────────────────────────
-  icons: {
-    icon: [
-      { url: "/favicon.ico" },
-      { url: "/logo.png", type: "image/png" },
-    ],
-    shortcut: "/favicon.ico",
-    apple: [
-      { url: "/logo.png", type: "image/png" },
-    ],
-  },
 
   // ─── Open Graph ─────────────────────────────────────
   openGraph: {
