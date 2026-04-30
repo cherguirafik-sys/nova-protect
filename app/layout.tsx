@@ -33,12 +33,18 @@ export const metadata: Metadata = {
   // ─── Keywords ────────────────────────────────────────
   keywords: [
     "NovaProtect",
+    "Nova Protect",
+    "nova protect insurance",
+    "nova protect france",
+    "insurance in france",
+    "insurance broker france",
     "assurance",
     "mutuelle santé",
     "assurance auto",
     "assurance habitation",
     "assurance animaux",
     "courtier assurance",
+    "courtier assurance France",
     "courtier agréé",
     "devis assurance gratuit",
     "comparer assurances",
@@ -79,6 +85,10 @@ export const metadata: Metadata = {
   // ─── Canonical & Alternates ─────────────────────────
   alternates: {
     canonical: "/",
+    languages: {
+      "fr-FR": "/",
+      "en": "/nova-protect-insurance",
+    },
   },
 
   // ─── Robots (meta tag level) ────────────────────────
@@ -159,7 +169,9 @@ export default function RootLayout({
   return (
     <html lang="fr" className={`${geistSans.variable} ${geistMono.variable} scroll-smooth antialiased`}>
       <body className="min-h-screen flex flex-col font-sans bg-white text-brand-navy">
-        {children}
+        <main className="flex-1 flex flex-col">
+          {children}
+        </main>
       </body>
     </html>
   );

@@ -6,14 +6,14 @@ import { ArrowLeft, Calendar, Clock, User, CheckCircle, ArrowRight, BookOpen } f
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Comment bien choisir sa mutuelle santé en 2025 ? Guide complet",
+  title: "Comment bien choisir sa mutuelle santé en 2026 ? Guide complet",
   description:
     "Découvrez les critères essentiels pour sélectionner une couverture santé parfaitement adaptée à vos besoins et à votre budget. Guide expert par NovaProtect, courtier agréé ORIAS.",
   alternates: {
     canonical: "https://novaprotect.site/blog/mutuelle-sante",
   },
   openGraph: {
-    title: "Comment bien choisir sa mutuelle santé en 2025 ? | NovaProtect",
+    title: "Comment bien choisir sa mutuelle santé en 2026 ? | NovaProtect",
     description:
       "Guide complet pour choisir la meilleure mutuelle santé : optique, dentaire, hospitalisation, médecines douces. Critères, pièges à éviter et conseils d'experts.",
     url: "https://novaprotect.site/blog/mutuelle-sante",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   },
   keywords: [
     "choisir mutuelle santé",
-    "meilleure mutuelle 2025",
+    "meilleure mutuelle 2026",
     "comparatif mutuelle santé",
     "mutuelle optique dentaire",
     "remboursement mutuelle",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
 const articleJsonLd = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  headline: "Comment bien choisir sa mutuelle santé en 2025 ?",
+  headline: "Comment bien choisir sa mutuelle santé en 2026 ?",
   description:
     "Découvrez les critères essentiels pour sélectionner une couverture santé parfaitement adaptée à vos besoins et à votre budget sans compromis.",
   image: "https://novaprotect.site/Mutuelle Santé.png",
@@ -50,8 +50,8 @@ const articleJsonLd = {
     name: "NovaProtect",
     logo: { "@type": "ImageObject", url: "https://novaprotect.site/logo.png" },
   },
-  datePublished: "2024-05-12",
-  dateModified: "2025-01-15",
+  datePublished: "2026-01-15",
+  dateModified: "2026-04-30",
   mainEntityOfPage: "https://novaprotect.site/blog/mutuelle-sante",
   articleSection: "Mutuelle Santé",
   wordCount: 1200,
@@ -139,7 +139,7 @@ export default function BlogPostMutuelleSante() {
               </div>
               
               <h1 className="text-3xl md:text-5xl font-extrabold text-brand-navy mb-6 leading-tight">
-                Comment bien choisir sa mutuelle santé en 2025 ?
+                Comment bien choisir sa mutuelle santé en 2026 ?
               </h1>
               
               <div className="flex flex-wrap items-center gap-6 text-sm text-brand-text-medium font-medium">
@@ -149,7 +149,7 @@ export default function BlogPostMutuelleSante() {
                   </div>
                   <span className="font-semibold text-brand-navy">Équipe NovaProtect</span>
                 </div>
-                <span className="flex items-center gap-1.5"><Calendar className="w-4 h-4" /> 12 Mai 2024</span>
+                <span className="flex items-center gap-1.5"><Calendar className="w-4 h-4" /> 15 Janvier 2026</span>
                 <span className="flex items-center gap-1.5"><Clock className="w-4 h-4" /> 5 min de lecture</span>
               </div>
             </div>

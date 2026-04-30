@@ -31,10 +31,39 @@ export const metadata: Metadata = {
   ],
 };
 
+const serviceJsonLd = {
+  "@context": "https://schema.org", "@type": "Service",
+  name: "Mutuelle Animaux NovaProtect",
+  description: "Assurance chien et chat : consultations vétérinaires, chirurgie, médicaments, forfait prévention. Jusqu'à 100% remboursé.",
+  provider: { "@type": "InsuranceAgency", name: "NovaProtect", alternateName: ["Nova Protect", "Nova Protect Insurance"], url: "https://novaprotect.site" },
+  areaServed: { "@type": "Country", name: "France" },
+  serviceType: "Pet Insurance",
+  url: "https://novaprotect.site/animaux",
+};
+
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org", "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Accueil", item: "https://novaprotect.site" },
+    { "@type": "ListItem", position: 2, name: "Assurance Animaux", item: "https://novaprotect.site/animaux" },
+  ],
+};
+
 export default function AnimauxPage() {
   return (
     <div className="flex flex-col min-h-screen font-sans bg-brand-bg-gray">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd).replace(/</g, "\\u003c") }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd).replace(/</g, "\\u003c") }} />
       <Navbar />
+
+      {/* Breadcrumb Navigation */}
+      <nav aria-label="Fil d'Ariane" className="container mx-auto px-4 pt-24 pb-0">
+        <ol className="flex items-center gap-2 text-sm text-brand-text-medium">
+          <li><Link href="/" className="hover:text-brand-green transition-colors">Accueil</Link></li>
+          <li>/</li>
+          <li className="text-brand-navy font-semibold">Assurance Animaux</li>
+        </ol>
+      </nav>
 
       {/* Hero Section */}
       <section className="pt-32 pb-20 overflow-hidden relative">
@@ -79,7 +108,7 @@ export default function AnimauxPage() {
                 <Link href="/#contact" className="bg-brand-green hover:bg-brand-green-hover text-white font-bold py-4 px-8 rounded-full shadow-lg transition-all hover:shadow-xl hover:-translate-y-1 text-center">
                   Obtenir un devis gratuit
                 </Link>
-                <a href="https://wa.me/33780180414" target="_blank" className="bg-white border-2 border-slate-200 hover:border-brand-navy text-brand-navy font-bold py-4 px-8 rounded-full shadow-md transition-all hover:shadow-lg flex items-center justify-center gap-2">
+                <a href="https://wa.me/33780180414" target="_blank" rel="noopener noreferrer" className="bg-white border-2 border-slate-200 hover:border-brand-navy text-brand-navy font-bold py-4 px-8 rounded-full shadow-md transition-all hover:shadow-lg flex items-center justify-center gap-2">
                   <Phone className="w-5 h-5" /> Appeler un conseiller
                 </a>
               </div>
@@ -89,7 +118,7 @@ export default function AnimauxPage() {
             <div className="w-full lg:w-1/2 relative h-[450px] lg:h-[600px] rounded-[2.5rem] overflow-hidden shadow-2xl border-8 border-white">
               <Image 
                 src="/Animaux.png" 
-                alt="Mutuelle Animaux" 
+                alt="Mutuelle animaux NovaProtect - assurance chien et chat en France" 
                 fill
                 className="object-cover"
                 priority
@@ -154,6 +183,18 @@ export default function AnimauxPage() {
               </p>
               <Link href="/#contact" className="inline-block bg-brand-navy hover:bg-brand-navy/90 text-white font-bold py-4 px-10 rounded-full shadow-lg transition-all hover:shadow-xl hover:-translate-y-1">
                 Obtenir mon tarif Animaux
+              </Link>
+            </div>
+
+            {/* Article connexe */}
+            <div className="mt-16 pt-10 border-t border-slate-200">
+              <h3 className="text-2xl font-bold text-brand-navy mb-6">Article connexe</h3>
+              <Link href="/blog/assurance-animaux" className="bg-brand-bg-blue rounded-2xl p-6 flex items-center gap-4 hover:shadow-lg transition-all group border border-brand-green/20">
+                <div className="bg-brand-green/10 p-3 rounded-xl flex-shrink-0"><Shield className="w-6 h-6 text-brand-green" /></div>
+                <div>
+                  <p className="font-bold text-brand-navy group-hover:text-brand-green transition-colors">Pourquoi assurer son animal de compagnie est indispensable</p>
+                  <p className="text-sm text-brand-text-medium">Les frais vétérinaires peuvent grimper très vite. Découvrez pourquoi l&apos;assurance est essentielle.</p>
+                </div>
               </Link>
             </div>
           </div>

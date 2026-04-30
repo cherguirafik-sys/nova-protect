@@ -31,10 +31,39 @@ export const metadata: Metadata = {
   ],
 };
 
+const serviceJsonLd = {
+  "@context": "https://schema.org", "@type": "Service",
+  name: "Mutuelle Santé NovaProtect",
+  description: "Couverture santé complète et personnalisée : optique, dentaire, hospitalisation, médecines douces. Remboursements sous 48h. Sans questionnaire médical.",
+  provider: { "@type": "InsuranceAgency", name: "NovaProtect", alternateName: ["Nova Protect", "Nova Protect Insurance"], url: "https://novaprotect.site" },
+  areaServed: { "@type": "Country", name: "France" },
+  serviceType: "Health Insurance",
+  url: "https://novaprotect.site/mutuelles",
+};
+
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org", "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Accueil", item: "https://novaprotect.site" },
+    { "@type": "ListItem", position: 2, name: "Mutuelle Santé", item: "https://novaprotect.site/mutuelles" },
+  ],
+};
+
 export default function MutuellesPage() {
   return (
     <div className="flex flex-col min-h-screen font-sans bg-brand-bg-gray">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd).replace(/</g, "\\u003c") }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd).replace(/</g, "\\u003c") }} />
       <Navbar />
+
+      {/* Breadcrumb Navigation */}
+      <nav aria-label="Fil d'Ariane" className="container mx-auto px-4 pt-24 pb-0">
+        <ol className="flex items-center gap-2 text-sm text-brand-text-medium">
+          <li><Link href="/" className="hover:text-brand-green transition-colors">Accueil</Link></li>
+          <li>/</li>
+          <li className="text-brand-navy font-semibold">Mutuelle Santé</li>
+        </ol>
+      </nav>
 
       {/* Hero Section */}
       <section className="pt-32 pb-20 overflow-hidden relative">
@@ -78,7 +107,7 @@ export default function MutuellesPage() {
                 <Link href="/#contact" className="bg-brand-green hover:bg-brand-green-hover text-white font-bold py-4 px-8 rounded-full shadow-lg transition-all hover:shadow-xl hover:-translate-y-1 text-center">
                   Obtenir un devis gratuit
                 </Link>
-                <a href="https://wa.me/33780180414" target="_blank" className="bg-white border-2 border-slate-200 hover:border-brand-navy text-brand-navy font-bold py-4 px-8 rounded-full shadow-md transition-all hover:shadow-lg flex items-center justify-center gap-2">
+                <a href="https://wa.me/33780180414" target="_blank" rel="noopener noreferrer" className="bg-white border-2 border-slate-200 hover:border-brand-navy text-brand-navy font-bold py-4 px-8 rounded-full shadow-md transition-all hover:shadow-lg flex items-center justify-center gap-2">
                   <Phone className="w-5 h-5" /> Appeler un conseiller
                 </a>
               </div>
@@ -88,7 +117,7 @@ export default function MutuellesPage() {
             <div className="w-full lg:w-1/2 relative h-[450px] lg:h-[600px] rounded-[2.5rem] overflow-hidden shadow-2xl border-8 border-white">
               <Image 
                 src="/Mutuelle Santé.png" 
-                alt="Mutuelle Santé" 
+                alt="Mutuelle santé NovaProtect - couverture santé personnalisée en France" 
                 fill
                 className="object-cover"
                 priority
@@ -153,6 +182,18 @@ export default function MutuellesPage() {
               </p>
               <Link href="/#contact" className="inline-block bg-brand-navy hover:bg-brand-navy/90 text-white font-bold py-4 px-10 rounded-full shadow-lg transition-all hover:shadow-xl hover:-translate-y-1">
                 Demander mon étude personnalisée
+              </Link>
+            </div>
+
+            {/* Article connexe — Internal linking */}
+            <div className="mt-16 pt-10 border-t border-slate-200">
+              <h3 className="text-2xl font-bold text-brand-navy mb-6">Article connexe</h3>
+              <Link href="/blog/mutuelle-sante" className="bg-brand-bg-blue rounded-2xl p-6 flex items-center gap-4 hover:shadow-lg transition-all group border border-brand-green/20">
+                <div className="bg-brand-green/10 p-3 rounded-xl flex-shrink-0"><HeartPulse className="w-6 h-6 text-brand-green" /></div>
+                <div>
+                  <p className="font-bold text-brand-navy group-hover:text-brand-green transition-colors">Comment bien choisir sa mutuelle santé en 2026 ?</p>
+                  <p className="text-sm text-brand-text-medium">Découvrez les critères essentiels pour sélectionner la couverture idéale.</p>
+                </div>
               </Link>
             </div>
           </div>
