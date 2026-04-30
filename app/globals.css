@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@theme {
+  /* Primary Colors (Main Theme) */
+  --color-brand-blue: #1F3A5F;
+  --color-brand-navy: #1B2F4B;
+  --color-brand-bg-blue: #EAF2F8;
+
+  /* Secondary Colors */
+  --color-brand-green: #2ECC71;
+  --color-brand-green-hover: #27AE60;
+  --color-brand-green-light: #A9DFBF;
+
+  /* Text Colors */
+  --color-brand-text-dark: #2C3E50;
+  --color-brand-text-medium: #5D6D7E;
+  --color-brand-text-white: #FFFFFF;
+
+  /* Card / Box Colors */
+  --color-brand-card: #FFFFFF;
+  --color-brand-bg-gray: #F4F6F7;
+  --color-brand-border: #D5D8DC;
+
+  /* Extra Accent Colors */
+  --color-brand-yellow: #F4D03F;
+  --color-brand-icon-blue: #3498DB;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #2C3E50;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0f172a;
+    --foreground: #f8fafc;
+  }
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
