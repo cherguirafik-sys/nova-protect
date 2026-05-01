@@ -7,6 +7,7 @@ import { Send, MapPin, Phone, Mail, Clock, ChevronDown } from "lucide-react";
 export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [isError, setIsError] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [selectedSubject, setSelectedSubject] = useState("");
 
@@ -17,22 +18,44 @@ export default function Contact() {
     { id: "animaux", label: "Animaux" },
   ];
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!selectedSubject) {
       alert("Veuillez sélectionner un sujet.");
       return;
     }
     setIsSubmitting(true);
-    
-    // Simulate API call
-    setTimeout(() => {
-      setIsSubmitting(false);
+    setIsError(false);
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formData.get("name") as string,
+          phone: formData.get("phone") as string,
+          email: formData.get("email") as string,
+          subject: selectedSubject,
+          message: formData.get("message") as string,
+          formType: "contact",
+        }),
+      });
+
+      if (!res.ok) throw new Error("Failed to send");
+
       setIsSuccess(true);
-      
-      // Reset success message after 3 seconds
-      setTimeout(() => setIsSuccess(false), 3000);
-    }, 1500);
+      form.reset();
+      setSelectedSubject("");
+      setTimeout(() => setIsSuccess(false), 4000);
+    } catch {
+      setIsError(true);
+      setTimeout(() => setIsError(false), 4000);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -146,6 +169,7 @@ export default function Contact() {
                   <input 
                     type="text" 
                     id="name" 
+                    name="name"
                     required
                     className="w-full px-4 py-3 rounded-lg border border-slate-200 bg-slate-50 focus:bg-white outline-none focus:ring-2 focus:ring-brand-green/50 focus:border-brand-green transition-all placeholder:text-slate-400"
                     placeholder="Jean Dupont"
@@ -158,6 +182,7 @@ export default function Contact() {
                   <input 
                     type="tel" 
                     id="phone" 
+                    name="phone"
                     required
                     className="w-full px-4 py-3 rounded-lg border border-slate-200 bg-slate-50 focus:bg-white outline-none focus:ring-2 focus:ring-brand-green/50 focus:border-brand-green transition-all placeholder:text-slate-400"
                     placeholder="+ (33) 12 34 56 78"
@@ -171,6 +196,7 @@ export default function Contact() {
                 <input 
                   type="email" 
                   id="email" 
+                  name="email"
                   required
                   className="w-full px-4 py-3 rounded-lg border border-slate-200 bg-slate-50 focus:bg-white outline-none focus:ring-2 focus:ring-brand-green/50 focus:border-brand-green transition-all placeholder:text-slate-400"
                   placeholder="jean.dupont@email.com"
@@ -246,6 +272,7 @@ export default function Contact() {
                 <label htmlFor="message" className="text-sm font-semibold text-brand-navy">Votre message</label>
                 <textarea 
                   id="message" 
+                  name="message"
                   rows={4}
                   required
                   className="w-full px-4 py-3 rounded-lg border border-slate-200 bg-slate-50 focus:bg-white outline-none focus:ring-2 focus:ring-brand-green/50 focus:border-brand-green transition-all resize-none placeholder:text-slate-400"
@@ -275,13 +302,15 @@ export default function Contact() {
                 type="submit"
                 disabled={isSubmitting}
                 className={`w-full py-3.5 rounded-xl font-bold text-white shadow-lg flex justify-center items-center gap-2 transition-all ${
-                  isSuccess ? 'bg-brand-blue' : 'bg-brand-green hover:bg-brand-green-hover'
+                  isSuccess ? 'bg-brand-blue' : isError ? 'bg-red-500' : 'bg-brand-green hover:bg-brand-green-hover'
                 } ${isSubmitting ? 'opacity-80 cursor-not-allowed' : ''}`}
               >
                 {isSubmitting ? (
                   <div className="w-6 h-6 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
                 ) : isSuccess ? (
-                  <>Message envoyé avec succès !</>
+                  <>✓ Message envoyé avec succès !</>
+                ) : isError ? (
+                  <>✕ Échec de l&apos;envoi. Réessayez.</>
                 ) : (
                   <>
                     Envoyer ma demande
