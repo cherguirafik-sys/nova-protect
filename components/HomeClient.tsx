@@ -266,7 +266,7 @@ export default function HomeClient() {
       {/* FAQ SECTION */}
       <FAQ />
 
-        {/* CONTACT SECTION */}
+      {/* CONTACT SECTION */}
       <Contact />
 
       {/* FOOTER */}
@@ -314,36 +314,17 @@ export default function HomeClient() {
             </div>
           </div>
 
-          <div className="w-full max-w-4xl mx-auto flex justify-between gap-4 text-sm text-brand-text-medium border-t border-white/10 pt-8 flex-wrap">
+          <div className="w-full flex justify-center gap-6 text-xs text-brand-text-medium border-t border-white/10 pt-8 flex-wrap">
             <Link href="/mentions-legales" className="hover:text-white transition-colors">Mentions Légales</Link>
             <Link href="/politique-de-confidentialite" className="hover:text-white transition-colors">Politique de Confidentialité</Link>
-            <Link href="/a-propos" className="hover:text-white transition-colors">À Propos</Link>
-            <Link href="/blog" className="hover:text-white transition-colors">Blog</Link>
             <a href="mailto:contact@novaprotect.site" className="hover:text-white transition-colors">contact@novaprotect.site</a>
           </div>
-          <p className="text-xs text-brand-text-medium mt-4">© 2026 Nova Protect (NovaProtect). Tous droits réservés.</p>
-        </motion.div>
-      </footer>
+    <p className="text-xs text-brand-text-medium mt-4">© 2026 Nova Protect (NovaProtect). Tous droits réservés.</p>
+  </motion.div>
+      </footer >
 
-      {/* Floating Action Button (WhatsApp Style from screenshot) */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ delay: 1, type: "spring", stiffness: 200, damping: 20 }}
-        className="fixed bottom-6 right-6 z-50"
-      >
-        <a href="https://wa.me/33780180414" target="_blank" rel="noopener noreferrer">
-        <button className="bg-brand-green cursor-pointer hover:bg-brand-green-hover text-white rounded-full py-3 px-5 shadow-2xl flex items-center gap-3 transition-transform hover:scale-105 active:scale-95">
-          <Phone className="h-6 w-6" />
-          <div className="text-left hidden sm:block">
-            <p className="font-bold leading-tight">Devis gratuit</p>
-            <p className="text-[10px] opacity-90">Réponse en quelques minutes</p>
-          </div>
-          <span className="absolute -top-1 -right-1 bg-red-500 text-white text-[10px] w-5 h-5 flex items-center justify-center rounded-full font-bold border-2 border-white shadow-sm">1</span>
-        </button>
-        </a>
-      </motion.div>
 
-    </div>
+
+    </div >
   );
 }

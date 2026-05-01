@@ -49,15 +49,15 @@ export default function Footer() {
           </div>
         </div>
 
-        <nav aria-label="Liens légaux" className="w-full max-w-4xl mx-auto flex justify-between gap-4 text-sm text-brand-text-medium border-t border-white/10 pt-8 flex-wrap">
+        <nav aria-label="Liens légaux" className="w-full max-w-2xl mx-auto flex justify-between gap-4 text-sm text-brand-text-medium border-t border-white/10 pt-8 flex-wrap">
           <Link href="/mentions-legales" className="hover:text-white transition-colors">Mentions Légales</Link>
           <Link href="/politique-de-confidentialite" className="hover:text-white transition-colors">Politique de Confidentialité</Link>
           <Link href="/a-propos" className="hover:text-white transition-colors">À Propos</Link>
           <Link href="/blog" className="hover:text-white transition-colors">Blog</Link>
           <a href="mailto:contact@novaprotect.site" className="hover:text-white transition-colors">contact@novaprotect.site</a>
         </nav>
-        <p className="text-sm text-brand-text-medium mt-8">© 2026 Nova Protect (NovaProtect). Tous droits réservés.</p>
-      </div>
-    </footer>
+    <p className="text-sm text-brand-text-medium mt-8">© 2026 Nova Protect (NovaProtect). Tous droits réservés.</p>
+  </div>
+    </footer >
   );
 }
