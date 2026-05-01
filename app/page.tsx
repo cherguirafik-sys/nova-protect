@@ -3,17 +3,21 @@ import HomeClient from "@/components/HomeClient";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "NovaProtect - Assurances Mutuelle Santé, Auto, Habitation, Animaux | Courtier Agréé Lyon",
+    absolute: "Nova Protect - Assurances Mutuelle Santé, Auto, Habitation, Animaux | Courtier Agréé France",
   },
   description:
-    "NovaProtect, courtier d'assurances agréé ORIAS n° 07 022 045. Comparez et souscrivez vos assurances Mutuelle Santé, Auto, Habitation et Animaux. Devis gratuit, réponse sous 24h. +500 clients satisfaits.",
+    "Nova Protect (NovaProtect), courtier d'assurances agréé ORIAS n° 07 022 045 en France. Comparez et souscrivez vos assurances Mutuelle Santé, Auto, Habitation et Animaux. Devis gratuit, réponse sous 24h. +500 clients satisfaits. Insurance broker in France.",
   alternates: {
     canonical: "https://novaprotect.site",
+    languages: {
+      "fr-FR": "https://novaprotect.site",
+      "en": "https://novaprotect.site/nova-protect-insurance",
+    },
   },
   openGraph: {
-    title: "NovaProtect - Optimisez Votre Protection avec Nos Assurances Personnalisées",
+    title: "Nova Protect France - Optimisez Votre Protection avec Nos Assurances Personnalisées",
     description:
-      "Mutuelle Santé, Auto, Habitation et Animaux : bénéficiez des meilleures garanties, sans tracas. Courtier agréé ORIAS, devis gratuit en ligne.",
+      "Mutuelle Santé, Auto, Habitation et Animaux : bénéficiez des meilleures garanties, sans tracas. Courtier agréé ORIAS, devis gratuit en ligne. Nova Protect insurance broker in France.",
     url: "https://novaprotect.site",
     type: "website",
   },
@@ -24,6 +28,7 @@ const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "InsuranceAgency",
   name: "NovaProtect",
+  alternateName: ["Nova Protect", "Nova Protect Insurance", "Nova Protect France"],
   url: "https://novaprotect.site",
   logo: "https://novaprotect.site/logo.png",
   image: "https://novaprotect.site/logo.png",
@@ -54,7 +59,12 @@ const organizationJsonLd = {
     opens: "09:00",
     closes: "18:00",
   },
-  sameAs: [],
+  sameAs: [
+    // Add social media profile URLs here when available:
+    // "https://www.linkedin.com/company/novaprotect",
+    // "https://www.facebook.com/novaprotect",
+    // "https://www.instagram.com/novaprotect",
+  ],
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: "4.8",
@@ -159,6 +169,22 @@ const faqJsonLd = {
       acceptedAnswer: {
         "@type": "Answer",
         text: "Oui, NovaProtect est immatriculé à l'ORIAS n° 07 022 045, sous le contrôle de l'ACPR.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Nova Protect propose-t-il des assurances partout en France ?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Oui, Nova Protect (NovaProtect) est un courtier d'assurances opérant sur l'ensemble du territoire français. Que vous soyez à Lyon, Paris, Marseille, Bordeaux ou ailleurs en France, nous vous proposons des assurances Mutuelle Santé, Auto, Habitation et Animaux adaptées à vos besoins. Nova Protect insurance services are available throughout France.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What is Nova Protect insurance?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Nova Protect (NovaProtect) is a licensed insurance broker in France (ORIAS n° 07 022 045). We offer health insurance (Mutuelle Santé), auto insurance, home insurance (Habitation), and pet insurance (Animaux) across all of France. Get a free quote at novaprotect.site.",
       },
     },
   ],

@@ -48,6 +48,34 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
 
+    // ─── SEO Landing Pages (Hidden from nav) ────────────
+    {
+      url: `${SITE_URL}/nova-protect-insurance`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${SITE_URL}/nova-protect-france`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+
+    // ─── Legal Pages ────────────────────────────────────
+    {
+      url: `${SITE_URL}/mentions-legales`,
+      lastModified: now,
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
+    {
+      url: `${SITE_URL}/politique-de-confidentialite`,
+      lastModified: now,
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
+
     // ─── Blog Pages ─────────────────────────────────────
     {
       url: `${SITE_URL}/blog`,

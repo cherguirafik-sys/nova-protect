@@ -31,10 +31,39 @@ export const metadata: Metadata = {
   ],
 };
 
+const serviceJsonLd = {
+  "@context": "https://schema.org", "@type": "Service",
+  name: "Assurance Auto NovaProtect",
+  description: "Assurance auto adaptée : tiers, intermédiaire ou tous risques. Dépannage 0 km, véhicule de remplacement, assistance 24/7.",
+  provider: { "@type": "InsuranceAgency", name: "NovaProtect", alternateName: ["Nova Protect", "Nova Protect Insurance"], url: "https://novaprotect.site" },
+  areaServed: { "@type": "Country", name: "France" },
+  serviceType: "Auto Insurance",
+  url: "https://novaprotect.site/auto",
+};
+
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org", "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Accueil", item: "https://novaprotect.site" },
+    { "@type": "ListItem", position: 2, name: "Assurance Auto", item: "https://novaprotect.site/auto" },
+  ],
+};
+
 export default function AutoPage() {
   return (
     <div className="flex flex-col min-h-screen font-sans bg-brand-bg-gray">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd).replace(/</g, "\\u003c") }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd).replace(/</g, "\\u003c") }} />
       <Navbar />
+
+      {/* Breadcrumb Navigation */}
+      <nav aria-label="Fil d'Ariane" className="container mx-auto px-4 pt-24 pb-0">
+        <ol className="flex items-center gap-2 text-sm text-brand-text-medium">
+          <li><Link href="/" className="hover:text-brand-green transition-colors">Accueil</Link></li>
+          <li>/</li>
+          <li className="text-brand-navy font-semibold">Assurance Auto</li>
+        </ol>
+      </nav>
 
       {/* Hero Section */}
       <section className="pt-32 pb-20 overflow-hidden relative">
@@ -88,7 +117,7 @@ export default function AutoPage() {
             <div className="w-full lg:w-1/2 relative h-[450px] lg:h-[600px] rounded-[2.5rem] overflow-hidden shadow-2xl border-8 border-white">
               <Image 
                 src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?q=80&w=2070&auto=format&fit=crop" 
-                alt="Assurance Auto" 
+                alt="Assurance auto NovaProtect - protection véhicule tous risques en France" 
                 fill
                 className="object-fill"
                 priority
@@ -153,6 +182,18 @@ export default function AutoPage() {
               </p>
               <Link href="/#contact" className="inline-block bg-brand-navy hover:bg-brand-navy/90 text-white font-bold py-4 px-10 rounded-full shadow-lg transition-all hover:shadow-xl hover:-translate-y-1">
                 Obtenir mon tarif Auto
+              </Link>
+            </div>
+
+            {/* Article connexe */}
+            <div className="mt-16 pt-10 border-t border-slate-200">
+              <h3 className="text-2xl font-bold text-brand-navy mb-6">Article connexe</h3>
+              <Link href="/blog/assurance-auto" className="bg-brand-bg-blue rounded-2xl p-6 flex items-center gap-4 hover:shadow-lg transition-all group border border-brand-green/20">
+                <div className="bg-brand-green/10 p-3 rounded-xl flex-shrink-0"><Car className="w-6 h-6 text-brand-green" /></div>
+                <div>
+                  <p className="font-bold text-brand-navy group-hover:text-brand-green transition-colors">Jeunes conducteurs : astuces pour faire baisser la prime</p>
+                  <p className="text-sm text-brand-text-medium">Nos meilleures astuces légales et pratiques pour réduire votre cotisation.</p>
+                </div>
               </Link>
             </div>
           </div>
