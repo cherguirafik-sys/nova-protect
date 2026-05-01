@@ -24,13 +24,15 @@ export default function BlogPostAssuranceAnimaux() {
       <Navbar />
       <section className="pt-32 pb-16 overflow-hidden relative bg-white">
         <div className="container mx-auto px-4 relative z-10 max-w-6xl">
-          <nav aria-label="Fil d'Ariane" className="mb-8">
-            <ol className="flex items-center gap-2 text-sm text-brand-text-medium">
-              <li><Link href="/" className="hover:text-brand-green transition-colors">Accueil</Link></li><li>/</li>
-              <li><Link href="/blog" className="hover:text-brand-green transition-colors">Blog</Link></li><li>/</li>
-              <li className="text-brand-navy font-semibold">Assurance Animaux</li>
-            </ol>
-          </nav>
+          <nav aria-label="Fil d'Ariane" className="mb-8 overflow-x-auto whitespace-nowrap scrollbar-hide">
+  <ol className="inline-flex items-center gap-2 text-sm text-brand-text-medium bg-white px-4 py-2 rounded-full shadow-sm w-fit border border-slate-100">
+    <li><Link href="/" className="hover:text-brand-green transition-colors">Accueil</Link></li>
+    <li className="text-slate-300">/</li>
+    <li><Link href="/blog" className="hover:text-brand-green transition-colors">Blog</Link></li>
+    <li className="text-slate-300">/</li>
+    <li className="text-brand-navy font-semibold bg-slate-100 px-3 py-1 rounded-full">Assurance Animaux</li>
+  </ol>
+</nav>
           <div className="flex flex-col lg:flex-row gap-12 items-center mb-16">
             <div className="w-full lg:w-1/2">
               <Link href="/blog" className="inline-flex items-center gap-2 text-brand-green font-bold hover:text-brand-green-hover mb-8 transition-colors"><ArrowLeft className="w-5 h-5" /> Retour au blog</Link>

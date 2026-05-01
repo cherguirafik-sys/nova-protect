@@ -57,13 +57,13 @@ export default function HabitationPage() {
       <Navbar />
 
       {/* Breadcrumb Navigation */}
-      <nav aria-label="Fil d'Ariane" className="container mx-auto px-4 pt-24 pb-0">
-        <ol className="flex items-center gap-2 text-sm text-brand-text-medium">
-          <li><Link href="/" className="hover:text-brand-green transition-colors">Accueil</Link></li>
-          <li>/</li>
-          <li className="text-brand-navy font-semibold">Assurance Habitation</li>
-        </ol>
-      </nav>
+      <nav aria-label="Fil d'Ariane" className="container mx-auto px-4 pt-24 pb-4 overflow-x-auto whitespace-nowrap scrollbar-hide">
+  <ol className="inline-flex items-center gap-2 text-sm text-brand-text-medium bg-white px-4 py-2 rounded-full shadow-sm w-fit border border-slate-100">
+    <li><Link href="/" className="hover:text-brand-green transition-colors">Accueil</Link></li>
+    <li className="text-slate-300">/</li>
+    <li className="text-brand-navy font-semibold bg-slate-100 px-3 py-1 rounded-full">Assurance Habitation</li>
+  </ol>
+</nav>
 
       {/* Hero Section */}
       <section className="pt-32 pb-20 overflow-hidden relative">

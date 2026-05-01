@@ -161,6 +161,8 @@ export const viewport: Viewport = {
   ],
 };
 
+import FloatingContactButton from "@/components/FloatingContactButton";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -172,6 +174,7 @@ export default function RootLayout({
         <main className="flex-1 flex flex-col">
           {children}
         </main>
+        <FloatingContactButton />
       </body>
     </html>
   );
