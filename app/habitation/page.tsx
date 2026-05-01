@@ -90,7 +90,7 @@ export default function HabitationPage() {
                 src="/Habitations.png" 
                 alt="Assurance Habitation" 
                 fill
-                className="object-cover"
+                className="object-fill"
                 priority
               />
               {/* Decorative Badge */}

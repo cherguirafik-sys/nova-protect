@@ -171,11 +171,7 @@ export default function HomeClient() {
                 className="w-full bg-brand-green hover:bg-brand-green-hover text-white font-bold py-2.5 rounded-md shadow-lg text-xs"
               >
                 VALIDER MA DEMANDE
-                <span className="block text-[10px] font-normal opacity-90 mt-0.5">VOS DONNÉES SONT PROTÉGÉES (RGPD)</span>
               </motion.button>
-              <p className="text-[10px] text-center text-brand-text-medium mt-3">
-                Vos données sont protégées (RGPD) et ne seront jamais revendues.
-              </p>
             </motion.form>
           </motion.div>
         </div>
@@ -283,29 +279,34 @@ export default function HomeClient() {
 
           <p className="text-brand-text-medium text-sm mb-12">Votre courtier de proximité pour une protection optimale au meilleur prix.</p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 w-full text-sm text-left max-w-2xl mx-auto mb-12">
+          <div className="flex flex-col md:flex-row justify-between gap-12 w-full text-sm text-left max-w-4xl mx-auto mb-12">
             <div>
-              <h4 className="font-bold mb-4 text-white uppercase tracking-wider">Mentions Légales</h4>
+              <h4 className="font-bold mb-4 text-white uppercase tracking-wider">Nous Contacter</h4>
               <ul className="space-y-2 text-brand-text-medium">
-                <li>NovaProtect - Capital 1000 €</li>
-                <li>RCS Lyon 912 685 538</li>
-                <li>5 rue de Seze - 69006 Lyon</li>
+                <li>5 rue de Seze 69006 Lyon</li>
+                <li><a href="tel:+33780180414" className="hover:text-white transition-colors">+ (33) 7 80 18 04 14</a></li>
               </ul>
             </div>
             <div>
+              <h4 className="font-bold mb-4 text-white uppercase tracking-wider">Mentions Légales</h4>
+              <ul className="space-y-2 text-brand-text-medium">
+                <li>NovaProtect</li>
+                <li>RCS Lyon 912 685 538</li>
+              </ul>
+            </div>
+            <div className="md:text-left">
               <h4 className="font-bold mb-4 text-white uppercase tracking-wider">Réglementation</h4>
               <ul className="space-y-2 text-brand-text-medium">
                 <li>ORIAS n° 07 022 045</li>
                 <li>Contrôle ACPR</li>
-                <li>Hébergement : Hostinger</li>
               </ul>
             </div>
           </div>
 
-          <div className="w-full flex justify-center gap-6 text-xs text-brand-text-medium border-t border-white/10 pt-8 flex-wrap">
+          <div className="w-full max-w-4xl mx-auto flex justify-between gap-4 text-sm text-brand-text-medium border-t border-white/10 pt-8 flex-wrap">
             <a href="#" className="hover:text-white transition-colors">Mentions Légales</a>
             <a href="#" className="hover:text-white transition-colors">Politique de Confidentialité</a>
-            <a href="#" className="hover:text-white transition-colors">contact@novaprotect.site</a>
+            <a href="mailto:contact@novaprotect.site" className="hover:text-white transition-colors">contact@novaprotect.site</a>
           </div>
           <p className="text-xs text-brand-text-medium mt-4">© 2026 NovaProtect. Tous droits réservés.</p>
         </motion.div>

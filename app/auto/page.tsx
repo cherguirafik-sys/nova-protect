@@ -90,11 +90,11 @@ export default function AutoPage() {
                 src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?q=80&w=2070&auto=format&fit=crop" 
                 alt="Assurance Auto" 
                 fill
-                className="object-cover"
+                className="object-fill"
                 priority
               />
               {/* Decorative Badge */}
-              <div className="absolute bottom-6 left-6 bg-white/90 backdrop-blur-md p-4 rounded-2xl shadow-xl flex items-center gap-4">
+              {/* <div className="absolute bottom-6 left-6 bg-white/90 backdrop-blur-md p-4 rounded-2xl shadow-xl flex items-center gap-4">
                 <div className="bg-brand-green text-white p-3 rounded-full">
                   <Shield className="w-6 h-6" />
                 </div>
@@ -102,7 +102,7 @@ export default function AutoPage() {
                   <p className="font-extrabold text-brand-navy">Assistance 0 km</p>
                   <p className="text-sm font-medium text-brand-text-medium">Inclus dans nos offres</p>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
