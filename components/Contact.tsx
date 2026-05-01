@@ -275,7 +275,7 @@ export default function Contact() {
                   name="message"
                   rows={4}
                   required
-                  className="w-full px-4 py-3 rounded-lg border border-slate-200 bg-slate-50 focus:bg-white outline-none focus:ring-2 focus:ring-brand-green/50 focus:border-brand-green transition-all resize-none placeholder:text-slate-400"
+                  className="w-full text-black px-4 py-3 rounded-lg border border-slate-200 bg-slate-50 focus:bg-white outline-none focus:ring-2 focus:ring-brand-green/50 focus:border-brand-green transition-all resize-none placeholder:text-slate-400"
                   placeholder="Comment pouvons-nous vous aider ?"
                 ></textarea>
               </div>
