@@ -244,14 +244,14 @@ export default function HomeClient() {
               <h4 className="font-bold mb-4 text-white uppercase tracking-wider">Nous Contacter</h4>
               <ul className="space-y-2 text-brand-text-medium">
                 <li>5 rue de Seze 69006 Lyon</li>
-                <li><a href="tel:+33780180414" className="hover:text-white transition-colors">+ (33) 7 80 18 04 14</a></li>
+                {/* <li><a href="tel:+33780180414" className="hover:text-white transition-colors">+ (33) 7 80 18 04 14</a></li> */}
               </ul>
             </div>
             <div>
               <h4 className="font-bold mb-4 text-white uppercase tracking-wider">Mentions Légales</h4>
               <ul className="space-y-2 text-brand-text-medium">
                 <li>NovaProtect</li>
-                <li>RCS Lyon 912 685 538</li>
+                <li>RCS Lyon</li>
               </ul>
             </div>
             <div className="md:text-left">

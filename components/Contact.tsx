@@ -100,7 +100,7 @@ export default function Contact() {
 
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <div className="bg-brand-green/20 p-3 rounded-full text-brand-green">
+                  {/* <div className="bg-brand-green/20 p-3 rounded-full text-brand-green">
                     <Phone className="w-6 h-6" />
                   </div>
                   <div>
@@ -113,7 +113,7 @@ export default function Contact() {
                     >
                       + (33) 7 80 18 04 14
                     </a>
-                  </div>
+                  </div> */}
                 </div>
 
                 <div className="flex items-start gap-4">
