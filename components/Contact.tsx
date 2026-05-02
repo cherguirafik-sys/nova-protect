@@ -198,6 +198,8 @@ export default function Contact() {
                   id="email" 
                   name="email"
                   required
+                  pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+                  title="Veuillez entrer une adresse e-mail valide"
                   className="w-full px-4 py-3 rounded-lg border border-slate-200 bg-slate-50 focus:bg-white outline-none focus:ring-2 focus:ring-brand-green/50 focus:border-brand-green transition-all placeholder:text-slate-400"
                   placeholder="jean.dupont@email.com"
                 />

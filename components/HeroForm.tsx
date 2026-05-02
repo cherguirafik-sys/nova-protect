@@ -33,7 +33,8 @@ export default function HeroForm() {
           phone: formData.get("hero_phone") as string,
           email: formData.get("hero_email") as string,
           subject: insuranceType,
-          message: `Demande de devis rapide — ${insuranceType}\nCode Postal: ${postalCode}`,
+          message: `Demande de devis rapide — ${insuranceType}`,
+          postalCode: postalCode,
           formType: "hero",
         }),
       });
@@ -89,9 +90,9 @@ export default function HeroForm() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mb-3">
-        <input type="text" name="hero_postal" required placeholder="Code Postal (ex: 75001)" className="border border-brand-border rounded-md px-3 py-2 text-black text-xs outline-none focus:border-brand-green focus:ring-1 focus:ring-brand-green transition-all placeholder:text-slate-400" />
+        <input type="text" name="hero_postal" required pattern="[0-9]{5}" title="Veuillez entrer un code postal français valide (5 chiffres)" placeholder="Code Postal (ex: 75001)" className="border border-brand-border rounded-md px-3 py-2 text-black text-xs outline-none focus:border-brand-green focus:ring-1 focus:ring-brand-green transition-all placeholder:text-slate-400" />
         <input type="text" name="hero_name" required placeholder="Prénom et Nom" className="border border-brand-border rounded-md px-3 py-2 text-black text-xs outline-none focus:border-brand-green focus:ring-1 focus:ring-brand-green transition-all placeholder:text-slate-400" />
-        <input type="email" name="hero_email" required placeholder="Adresse E-mail" className="border border-brand-border rounded-md px-3 py-2 text-black text-xs outline-none focus:border-brand-green focus:ring-1 focus:ring-brand-green transition-all md:col-span-2 placeholder:text-slate-400" />
+        <input type="email" name="hero_email" required pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" title="Veuillez entrer une adresse e-mail valide" placeholder="Adresse E-mail" className="border border-brand-border rounded-md px-3 py-2 text-black text-xs outline-none focus:border-brand-green focus:ring-1 focus:ring-brand-green transition-all md:col-span-2 placeholder:text-slate-400" />
         <input type="tel" name="hero_phone" required placeholder="Numéro de Téléphone" className="border border-brand-border rounded-md px-3 py-2 text-black text-xs outline-none focus:border-brand-green focus:ring-1 focus:ring-brand-green transition-all md:col-span-2 placeholder:text-slate-400" />
       </div>
 

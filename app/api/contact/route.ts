@@ -3,13 +3,15 @@ import { smtpConfig } from "@/lib/config";
 
 export const dynamic = "force-dynamic";
 
+// Base interface, but we allow other string fields to be submitted
 interface ContactFormData {
   name: string;
   phone: string;
   email: string;
   subject: string;
-  message: string;
+  message?: string;
   formType?: "contact" | "hero";
+  [key: string]: any;
 }
 
 // Subject label mapping
@@ -24,12 +26,22 @@ const subjectLabels: Record<string, string> = {
   Animaux: "Assurance Animaux",
 };
 
+// French labels for known form fields
+const fieldLabels: Record<string, string> = {
+  name: "Nom",
+  phone: "Téléphone",
+  email: "E-mail",
+  subject: "Sujet",
+  message: "Message",
+  postalCode: "Code Postal",
+};
+
 export async function POST(request: Request) {
   try {
     const body: ContactFormData = await request.json();
 
     // Validate required fields
-    const { name, phone, email, subject, message, formType } = body;
+    const { name, phone, email, subject, message, formType, ...otherFields } = body;
 
     if (!name || !email || !subject) {
       return Response.json(
@@ -62,6 +74,54 @@ export async function POST(request: Request) {
       ? "Formulaire Hero (Devis rapide)"
       : "Formulaire Contact";
 
+    // Build form fields array dynamically from all submitted fields
+    const formFields: { key: string; label: string; value: string; isEmail?: boolean; isSubject?: boolean }[] = [];
+
+    // Add known fields in order
+    formFields.push({ key: "name", label: fieldLabels.name, value: name });
+    formFields.push({ key: "phone", label: fieldLabels.phone, value: phone || "Non renseigné" });
+    formFields.push({ key: "email", label: fieldLabels.email, value: email, isEmail: true });
+    formFields.push({ key: "subject", label: fieldLabels.subject, value: subjectLabel, isSubject: true });
+
+    // Add any other dynamic fields
+    for (const [key, value] of Object.entries(otherFields)) {
+      if (value) {
+        const label = fieldLabels[key] || key.charAt(0).toUpperCase() + key.slice(1).replace(/([A-Z])/g, ' $1');
+        formFields.push({ key, label, value: String(value) });
+      }
+    }
+
+    // Add message at the end if it exists
+    if (message) {
+      formFields.push({ key: "message", label: fieldLabels.message, value: message });
+    }
+
+    const tableRows = formFields
+      .map((field) => {
+        let valueHtml: string;
+
+        if (field.isEmail) {
+          valueHtml = `<a href="mailto:${field.value}" style="color: #22c55e; font-size: 15px; font-weight: 500; text-decoration: none;">${field.value}</a>`;
+        } else if (field.isSubject) {
+          valueHtml = `<span style="background: #1F3A5F; color: white; padding: 4px 12px; border-radius: 12px; font-size: 13px; font-weight: 600;">${field.value}</span>`;
+        } else if (field.key === "message") {
+          valueHtml = field.value.replace(/\n/g, "<br/>");
+        } else {
+          valueHtml = field.value;
+        }
+
+        return `
+            <tr>
+              <td style="padding: 14px 16px; border-bottom: 1px solid #e2e8f0; background: #f1f5f9; color: #64748b; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; width: 140px; vertical-align: top;">
+                ${field.label}
+              </td>
+              <td style="padding: 14px 16px; border-bottom: 1px solid #e2e8f0; background: #ffffff; color: #1e293b; font-size: 15px; font-weight: 500; line-height: 1.6;">
+                ${valueHtml}
+              </td>
+            </tr>`;
+      })
+      .join("");
+
     // Build the email HTML
     const htmlContent = `
       <div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 600px; margin: 0 auto; background: #f8fafc; border-radius: 16px; overflow: hidden; border: 1px solid #e2e8f0;">
@@ -69,7 +129,7 @@ export async function POST(request: Request) {
         <!-- Header -->
         <div style="background: linear-gradient(135deg, #1F3A5F 0%, #122238 100%); padding: 32px; text-align: center;">
           <h1 style="color: #ffffff; margin: 0; font-size: 24px; font-weight: 800; letter-spacing: 1px;">
-            🛡️ NovaProtect
+            &#128737;&#65039; NovaProtect
           </h1>
           <p style="color: #94a3b8; margin: 8px 0 0; font-size: 14px;">
             Nouvelle demande de contact
@@ -83,62 +143,20 @@ export async function POST(request: Request) {
           </span>
         </div>
 
-        <!-- Content -->
+        <!-- Récapitulatif du formulaire -->
         <div style="padding: 24px 32px;">
-          <table style="width: 100%; border-collapse: collapse;">
-            <tr>
-              <td style="padding: 12px 0; border-bottom: 1px solid #e2e8f0; color: #64748b; font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; width: 140px;">
-                Nom
-              </td>
-              <td style="padding: 12px 0; border-bottom: 1px solid #e2e8f0; color: #1e293b; font-size: 15px; font-weight: 500;">
-                ${name}
-              </td>
-            </tr>
-            <tr>
-              <td style="padding: 12px 0; border-bottom: 1px solid #e2e8f0; color: #64748b; font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">
-                Téléphone
-              </td>
-              <td style="padding: 12px 0; border-bottom: 1px solid #e2e8f0; color: #1e293b; font-size: 15px; font-weight: 500;">
-                ${phone || "Non renseigné"}
-              </td>
-            </tr>
-            <tr>
-              <td style="padding: 12px 0; border-bottom: 1px solid #e2e8f0; color: #64748b; font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">
-                E-mail
-              </td>
-              <td style="padding: 12px 0; border-bottom: 1px solid #e2e8f0;">
-                <a href="mailto:${email}" style="color: #22c55e; font-size: 15px; font-weight: 500; text-decoration: none;">
-                  ${email}
-                </a>
-              </td>
-            </tr>
-            <tr>
-              <td style="padding: 12px 0; border-bottom: 1px solid #e2e8f0; color: #64748b; font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">
-                Sujet
-              </td>
-              <td style="padding: 12px 0; border-bottom: 1px solid #e2e8f0;">
-                <span style="background: #1F3A5F; color: white; padding: 4px 12px; border-radius: 12px; font-size: 13px; font-weight: 600;">
-                  ${subjectLabel}
-                </span>
-              </td>
-            </tr>
-            ${message ? `
-            <tr>
-              <td style="padding: 12px 0; color: #64748b; font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; vertical-align: top;">
-                Message
-              </td>
-              <td style="padding: 12px 0; color: #1e293b; font-size: 15px; line-height: 1.6;">
-                ${message.replace(/\n/g, "<br/>")}
-              </td>
-            </tr>
-            ` : ""}
+          <h2 style="color: #1F3A5F; font-size: 16px; font-weight: 700; margin: 0 0 16px 0; text-transform: uppercase; letter-spacing: 0.5px;">
+            R&eacute;capitulatif du formulaire
+          </h2>
+          <table style="width: 100%; border-collapse: collapse; border-radius: 12px; overflow: hidden; border: 1px solid #e2e8f0;">
+            ${tableRows}
           </table>
         </div>
 
         <!-- Footer -->
         <div style="background: #f1f5f9; padding: 20px 32px; text-align: center; border-top: 1px solid #e2e8f0;">
           <p style="color: #94a3b8; font-size: 12px; margin: 0;">
-            Ce message a été envoyé depuis le site <strong>novaprotect.site</strong><br/>
+            Ce message a &eacute;t&eacute; envoy&eacute; depuis le site <strong>novaprotect.site</strong><br/>
             ${new Date().toLocaleString("fr-FR", { timeZone: "Europe/Paris" })}
           </p>
         </div>
