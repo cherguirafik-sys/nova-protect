@@ -74,7 +74,7 @@ export default function HomeClient() {
       </motion.div>
 
       {/* TRUST BAR */}
-      <div className="bg-brand-blue text-white py-3 overflow-hidden">
+      {/* <div className="bg-brand-blue text-white py-3 overflow-hidden">
         <motion.div
           variants={staggerContainer}
           initial="hidden"
@@ -87,7 +87,7 @@ export default function HomeClient() {
           <motion.div variants={fadeUp} className="flex items-center gap-2"><Gift className="text-red-400 h-4 w-4" /> <span><strong>Devis</strong> 100% gratuit &amp; sans engagement</span></motion.div>
           <motion.div variants={fadeUp} className="flex items-center gap-2"><Star className="text-brand-yellow h-4 w-4 fill-brand-yellow" /> <span><strong>+500 clients</strong> satisfaits</span></motion.div>
         </motion.div>
-      </div>
+      </div> */}
 
 
       {/* HERO SECTION */}
@@ -268,8 +268,8 @@ export default function HomeClient() {
             <Link href="/politique-de-confidentialite" className="hover:text-white transition-colors">Politique de Confidentialité</Link>
             <a href="mailto:contact@novaprotect.site" className="hover:text-white transition-colors">contact@novaprotect.site</a>
           </div>
-    <p className="text-xs text-brand-text-medium mt-4">© 2026 Nova Protect (NovaProtect). Tous droits réservés.</p>
-  </motion.div>
+          <p className="text-xs text-brand-text-medium mt-4">© 2026 Nova Protect (NovaProtect). Tous droits réservés.</p>
+        </motion.div>
       </footer >
 
 
