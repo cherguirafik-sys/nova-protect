@@ -251,7 +251,8 @@ export default function HomeClient() {
               <h4 className="font-bold mb-4 text-white uppercase tracking-wider">Mentions Légales</h4>
               <ul className="space-y-2 text-brand-text-medium">
                 <li>NovaProtect</li>
-                <li>RCS Lyon</li>
+                <li>RCS Lyon 912 685 538</li>
+                <li>5 rue de Seze - 69006 Lyon</li>
               </ul>
             </div>
             <div className="md:text-left">
