@@ -243,7 +243,7 @@ export default function HomeClient() {
             <div>
               <h4 className="font-bold mb-4 text-white uppercase tracking-wider">Nous Contacter</h4>
               <ul className="space-y-2 text-brand-text-medium">
-                <li>5 rue de Seze 69006 Lyon</li>
+                <li>contact@novaprotect.site</li>
                 {/* <li><a href="tel:+33780180414" className="hover:text-white transition-colors">+ (33) 7 80 18 04 14</a></li> */}
               </ul>
             </div>
