@@ -23,8 +23,8 @@ export const metadata: Metadata = {
 
   // ─── Title (template applies to child pages) ─────────
   title: {
-    default: "NovaProtect - Assurances Mutuelle Santé, Auto, Habitation, Animaux | Courtier Agréé",
-    template: "%s | NovaProtect - Courtier d'Assurances",
+    default: "NovaProtect | Courtier Assurances Mutuelle Santé, Auto, Habitation, Animaux",
+    template: "%s | NovaProtect",
   },
 
   // ─── Description ─────────────────────────────────────
@@ -83,11 +83,15 @@ export const metadata: Metadata = {
   },
 
   // ─── Canonical & Alternates ─────────────────────────
+  // hreflang: do NOT include a self-referencing fr-FR alternate when
+  // canonical already points to "/". Only list the non-default language
+  // alternate to avoid the "alternate link pointing to itself is invalid" error.
   alternates: {
-    canonical: "/",
+    canonical: "https://novaprotect.site/",
     languages: {
-      "fr-FR": "/",
-      "en": "/nova-protect-insurance",
+      "fr": "https://novaprotect.site/",
+      "en": "https://novaprotect.site/nova-protect-insurance",
+      "x-default": "https://novaprotect.site/",
     },
   },
 
