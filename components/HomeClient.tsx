@@ -117,7 +117,7 @@ export default function HomeClient() {
               l&apos;assurance pour tous.
             </motion.h1>
             <motion.p variants={fadeLeft} className="text-brand-text-medium text-sm mb-5 max-w-lg">
-              Mutuelle, Auto, Habitation et Animaux : bénéficiez des meilleures garanties, en toute simplicité.
+              Courtier d&apos;assurances agréé basé à Lyon : mutuelle santé, auto, habitation et animaux avec devis gratuit sous 24h.
             </motion.p>
 
             {/* Form */}
@@ -237,6 +237,8 @@ export default function HomeClient() {
             <Link href="/habitation" className="hover:text-white transition-colors">Assurance Habitation</Link>
             <span className="text-white/20">•</span>
             <Link href="/animaux" className="hover:text-white transition-colors">Assurance Animaux</Link>
+            <span className="text-white/20">•</span>
+            <Link href="/courtier-assurance-lyon" className="hover:text-white transition-colors">Courtier Assurance Lyon</Link>
           </div>
 
           <div className="flex flex-col md:flex-row justify-between gap-12 w-full text-sm text-left max-w-4xl mx-auto mb-12">

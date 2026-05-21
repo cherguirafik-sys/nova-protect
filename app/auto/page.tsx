@@ -6,14 +6,14 @@ import { CheckCircle, Shield, Car, Phone } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Assurance Auto - Tous Risques, Tiers & Intermédiaire | NovaProtect",
+  title: "Assurance Auto Lyon & France - Tous Risques, Tiers | NovaProtect",
   description:
-    "Assurance auto adaptée à votre profil : tiers, intermédiaire ou tous risques. Dépannage 0 km, véhicule de remplacement, assistance 24/7. Devis gratuit en ligne.",
+    "Courtier assurance auto à Lyon et en France : tiers, intermédiaire ou tous risques. Jeune conducteur, dépannage 0 km, assistance 24/7. Devis gratuit.",
   alternates: {
     canonical: "https://novaprotect.site/auto",
   },
   openGraph: {
-    title: "Assurance Auto Tous Risques | NovaProtect",
+    title: "Assurance Auto Lyon & France | NovaProtect",
     description:
       "Protection véhicule complète : dépannage 0 km, assistance 24/7, prêt véhicule. Courtier agréé ORIAS.",
     url: "https://novaprotect.site/auto",
@@ -28,6 +28,9 @@ export const metadata: Metadata = {
     "dépannage 0 km",
     "NovaProtect auto",
     "courtier assurance auto Lyon",
+    "assurance auto Lyon",
+    "assurance jeune conducteur Lyon",
+    "devis assurance auto Lyon",
   ],
 };
 
@@ -35,9 +38,9 @@ const serviceJsonLd = {
   "@context": "https://schema.org", "@type": "Service",
   name: "Assurance Auto NovaProtect",
   description: "Assurance auto adaptée : tiers, intermédiaire ou tous risques. Dépannage 0 km, véhicule de remplacement, assistance 24/7.",
-  provider: { "@type": "InsuranceAgency", name: "NovaProtect", alternateName: ["Nova Protect", "Nova Protect Insurance"], url: "https://novaprotect.site" },
-  areaServed: { "@type": "Country", name: "France" },
-  serviceType: "Auto Insurance",
+  provider: { "@type": "InsuranceAgency", name: "NovaProtect", alternateName: ["Nova Protect", "NovaProtect Lyon"], url: "https://novaprotect.site" },
+  areaServed: [{ "@type": "City", name: "Lyon" }, { "@type": "Country", name: "France" }],
+  serviceType: "Assurance auto",
   url: "https://novaprotect.site/auto",
 };
 

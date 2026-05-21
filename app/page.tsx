@@ -3,21 +3,21 @@ import HomeClient from "@/components/HomeClient";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Nova Protect - Assurances Mutuelle Santé, Auto, Habitation, Animaux | Courtier Agréé France",
+    absolute: "Nova Protect - Courtier Assurance Lyon & France | Mutuelle, Auto, Habitation, Animaux",
   },
   description:
-    "Nova Protect (NovaProtect), courtier d'assurances agréé ORIAS n° 07 022 045 en France. Comparez et souscrivez vos assurances Mutuelle Santé, Auto, Habitation et Animaux. Devis gratuit, réponse sous 24h. +500 clients satisfaits. Insurance broker in France.",
+    "Nova Protect (NovaProtect), courtier d'assurances agréé ORIAS n° 07 022 045 basé à Lyon. Comparez vos mutuelles santé, assurances auto, habitation et animaux en France. Devis gratuit, réponse sous 24h.",
   alternates: {
     canonical: "https://novaprotect.site",
     languages: {
       "fr-FR": "https://novaprotect.site",
-      "en": "https://novaprotect.site/nova-protect-insurance",
+      "x-default": "https://novaprotect.site",
     },
   },
   openGraph: {
-    title: "Nova Protect France - Optimisez Votre Protection avec Nos Assurances Personnalisées",
+    title: "Nova Protect Lyon & France - Courtier d'Assurances Agréé",
     description:
-      "Mutuelle Santé, Auto, Habitation et Animaux : bénéficiez des meilleures garanties, sans tracas. Courtier agréé ORIAS, devis gratuit en ligne. Nova Protect insurance broker in France.",
+      "Mutuelle santé, assurance auto, habitation et animaux : comparez les meilleures garanties avec un courtier agréé ORIAS basé à Lyon. Devis gratuit en ligne.",
     url: "https://novaprotect.site",
     type: "website",
   },
@@ -28,18 +28,19 @@ const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "InsuranceAgency",
   name: "NovaProtect",
-  alternateName: ["Nova Protect", "Nova Protect Insurance", "Nova Protect France"],
+  alternateName: ["Nova Protect", "Nova Protect France", "NovaProtect Lyon"],
   url: "https://novaprotect.site",
   logo: "https://novaprotect.site/logo.png",
   image: "https://novaprotect.site/logo.png",
   description:
-    "NovaProtect est votre courtier d'assurances de confiance, offrant des assurances Mutuelle Santé, Auto, Habitation et Animaux aux meilleures garanties.",
+    "NovaProtect est un courtier d'assurances agréé ORIAS basé à Lyon, spécialisé en mutuelle santé, assurance auto, habitation et animaux pour les particuliers en France.",
   telephone: "+33780180414",
   email: "contact@novaprotect.site",
   address: {
     "@type": "PostalAddress",
     streetAddress: "5 rue de Seze",
     addressLocality: "Lyon",
+    addressRegion: "Auvergne-Rhône-Alpes",
     postalCode: "69006",
     addressCountry: "FR",
   },
@@ -48,10 +49,20 @@ const organizationJsonLd = {
     latitude: 45.7578,
     longitude: 4.832,
   },
-  areaServed: {
-    "@type": "Country",
-    name: "France",
-  },
+  areaServed: [
+    {
+      "@type": "City",
+      name: "Lyon",
+    },
+    {
+      "@type": "AdministrativeArea",
+      name: "Auvergne-Rhône-Alpes",
+    },
+    {
+      "@type": "Country",
+      name: "France",
+    },
+  ],
   priceRange: "€€",
   openingHoursSpecification: {
     "@type": "OpeningHoursSpecification",
@@ -173,18 +184,18 @@ const faqJsonLd = {
     },
     {
       "@type": "Question",
-      name: "Nova Protect propose-t-il des assurances partout en France ?",
+      name: "Nova Protect est-il un courtier d'assurance à Lyon ?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Oui, Nova Protect (NovaProtect) est un courtier d'assurances opérant sur l'ensemble du territoire français. Que vous soyez à Lyon, Paris, Marseille, Bordeaux ou ailleurs en France, nous vous proposons des assurances Mutuelle Santé, Auto, Habitation et Animaux adaptées à vos besoins. Nova Protect insurance services are available throughout France.",
+        text: "Oui, Nova Protect (NovaProtect) est un courtier d'assurances agréé ORIAS basé à Lyon, au 5 rue de Seze, 69006 Lyon. Nous accompagnons les particuliers à Lyon, en Auvergne-Rhône-Alpes et dans toute la France.",
       },
     },
     {
       "@type": "Question",
-      name: "What is Nova Protect insurance?",
+      name: "Nova Protect propose-t-il des assurances partout en France ?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Nova Protect (NovaProtect) is a licensed insurance broker in France (ORIAS n° 07 022 045). We offer health insurance (Mutuelle Santé), auto insurance, home insurance (Habitation), and pet insurance (Animaux) across all of France. Get a free quote at novaprotect.site.",
+        text: "Oui, Nova Protect opère sur l'ensemble du territoire français. Depuis Lyon, nos conseillers comparent les offres de mutuelle santé, assurance auto, habitation et animaux pour proposer une couverture adaptée à chaque profil.",
       },
     },
   ],

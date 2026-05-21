@@ -6,14 +6,14 @@ import { CheckCircle, Shield, Home as HomeIcon, Phone } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Assurance Habitation - Protection Logement Complète | NovaProtect",
+  title: "Assurance Habitation Lyon & France - Protection Logement | NovaProtect",
   description:
-    "Protégez votre logement avec notre assurance habitation : incendie, dégâts des eaux, vol, catastrophes naturelles. Assistance d'urgence 24/7. Devis gratuit.",
+    "Courtier assurance habitation à Lyon et en France : appartement, maison, locataire, propriétaire. Incendie, dégâts des eaux, vol. Devis gratuit.",
   alternates: {
     canonical: "https://novaprotect.site/habitation",
   },
   openGraph: {
-    title: "Assurance Habitation Complète | NovaProtect",
+    title: "Assurance Habitation Lyon & France | NovaProtect",
     description:
       "Protection logement tout risque : incendie, dégâts des eaux, vol. Assistance 24/7 et indemnisation rapide. Courtier agréé ORIAS.",
     url: "https://novaprotect.site/habitation",
@@ -28,6 +28,9 @@ export const metadata: Metadata = {
     "assurance vol habitation",
     "NovaProtect habitation",
     "courtier assurance habitation Lyon",
+    "assurance habitation Lyon",
+    "assurance logement Lyon",
+    "assurance locataire Lyon",
   ],
 };
 
@@ -35,9 +38,9 @@ const serviceJsonLd = {
   "@context": "https://schema.org", "@type": "Service",
   name: "Assurance Habitation NovaProtect",
   description: "Protection logement complète : incendie, dégâts des eaux, vol, catastrophes naturelles. Assistance d'urgence 24/7.",
-  provider: { "@type": "InsuranceAgency", name: "NovaProtect", alternateName: ["Nova Protect", "Nova Protect Insurance"], url: "https://novaprotect.site" },
-  areaServed: { "@type": "Country", name: "France" },
-  serviceType: "Home Insurance",
+  provider: { "@type": "InsuranceAgency", name: "NovaProtect", alternateName: ["Nova Protect", "NovaProtect Lyon"], url: "https://novaprotect.site" },
+  areaServed: [{ "@type": "City", name: "Lyon" }, { "@type": "Country", name: "France" }],
+  serviceType: "Assurance habitation",
   url: "https://novaprotect.site/habitation",
 };
 

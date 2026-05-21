@@ -50,10 +50,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     // ─── SEO Landing Pages (Hidden from nav) ────────────
     {
-      url: `${SITE_URL}/nova-protect-insurance`,
+      url: `${SITE_URL}/courtier-assurance-lyon`,
       lastModified: now,
       changeFrequency: "monthly",
-      priority: 0.8,
+      priority: 0.9,
     },
     {
       url: `${SITE_URL}/nova-protect-france`,

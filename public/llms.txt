@@ -1,12 +1,12 @@
 # NovaProtect — Courtier d'Assurances Agréé ORIAS
 
-> NovaProtect (also known as Nova Protect, Nova Protect Insurance, Nova Protect France) est un courtier d'assurances agréé ORIAS (n° 07 022 045) basé à Lyon, France.
+> NovaProtect (aussi connu sous les noms Nova Protect, Nova Protect France et NovaProtect Lyon) est un courtier d'assurances agréé ORIAS (n° 07 022 045) basé à Lyon, France.
 > Nous comparons et négocions les meilleures offres du marché français pour nos clients.
 > Site web : https://novaprotect.site | Contact : contact@novaprotect.site | Tél : +33 7 80 18 04 14
 
-## Nova Protect Insurance — Insurance Broker in France
+## NovaProtect France et Lyon
 
-Nova Protect (NovaProtect) is a licensed and regulated insurance broker operating across all of France. Registered with ORIAS (n° 07 022 045) and supervised by the ACPR, Nova Protect compares insurance offers from multiple French providers to find clients the best coverage at competitive prices. Services include health insurance (Mutuelle Santé), auto insurance, home insurance (Assurance Habitation), and pet insurance (Assurance Animaux). Free quotes available at novaprotect.site.
+Nova Protect (NovaProtect) est un courtier d'assurances agréé et régulé, basé à Lyon et opérant sur toute la France. Immatriculé à l'ORIAS sous le n° 07 022 045 et supervisé par l'ACPR, NovaProtect compare les offres de mutuelle santé, assurance auto, assurance habitation et assurance animaux afin de proposer une couverture adaptée au profil et au budget de chaque client. Devis gratuit disponible sur novaprotect.site.
 
 ## Qui est NovaProtect ?
 
@@ -50,7 +50,7 @@ NovaProtect est un courtier d'assurances indépendant et agréé, enregistré au
 2. **Agréé ORIAS** — Numéro d'immatriculation 07 022 045, vérifiable sur orias.fr.
 3. **Devis gratuit en ligne** — Réponse personnalisée sous 24 heures.
 4. **Accompagnement humain** — Un conseiller dédié pour chaque dossier.
-5. **Basé en France** — Siège à Lyon (69), conforme RGPD et réglementation française.
+5. **Basé à Lyon** — Siège social à Lyon (69), conforme RGPD et réglementation française.
 6. **Couverture nationale** — Nova Protect opère sur l'ensemble du territoire français.
 
 ## FAQ — Questions fréquemment posées
@@ -71,13 +71,13 @@ NovaProtect propose quatre types d'assurances : Mutuelle Santé (optique, dentai
 Oui, NovaProtect respecte intégralement le Règlement Général sur la Protection des Données (RGPD). Toutes les données personnelles sont traitées conformément à la réglementation européenne. Consultez notre politique de confidentialité sur https://novaprotect.site/politique-de-confidentialite.
 
 ### Nova Protect propose-t-il des assurances partout en France ?
-Oui, Nova Protect (NovaProtect) est un courtier d'assurances opérant sur l'ensemble du territoire français. Que vous soyez à Lyon, Paris, Marseille, Bordeaux ou ailleurs en France, nous vous proposons des assurances adaptées à vos besoins.
+Oui, Nova Protect (NovaProtect) est un courtier d'assurances basé à Lyon et opérant sur l'ensemble du territoire français. Que vous soyez à Lyon, Marseille, Bordeaux, Toulouse ou ailleurs en France, nous vous proposons des assurances adaptées à vos besoins.
 
-### What is Nova Protect insurance?
-Nova Protect (NovaProtect) is a licensed insurance broker in France (ORIAS n° 07 022 045). We offer health insurance (Mutuelle Santé), auto insurance, home insurance (Habitation), and pet insurance (Animaux) across all of France. Get a free quote at novaprotect.site.
+### NovaProtect est-il présent à Lyon ?
+Oui, NovaProtect est basé à Lyon, au 5 rue de Sèze, 69006 Lyon. La page locale dédiée est https://novaprotect.site/courtier-assurance-lyon.
 
-### How does insurance work in France?
-France has a national health system (Sécurité Sociale) covering basic medical costs. A complementary health insurance (mutuelle santé) covers remaining expenses. Auto insurance is mandatory for all vehicles. Home insurance is required for renters. Nova Protect helps navigate all these requirements.
+### Comment fonctionne l'assurance en France ?
+En France, la Sécurité sociale rembourse une partie des frais médicaux. Une mutuelle santé complète ces remboursements. L'assurance auto est obligatoire pour tout véhicule, et l'assurance habitation est obligatoire pour les locataires. NovaProtect aide à comparer ces protections et à choisir le contrat adapté.
 
 ### Quelle est la meilleure mutuelle santé en 2026 ?
 La meilleure mutuelle dépend de vos besoins individuels. Les critères clés sont : le niveau de remboursement optique/dentaire, la prise en charge hospitalisation, les médecines douces, et le rapport qualité/prix. NovaProtect compare gratuitement les offres pour trouver la formule la plus adaptée à votre profil.
@@ -88,7 +88,7 @@ Plusieurs solutions existent : la conduite accompagnée (réduit la surprime de 
 ## Informations légales
 
 - **Raison sociale** : NovaProtect (Nova Protect)
-- **Noms alternatifs** : Nova Protect Insurance, Nova Protect France
+- **Noms alternatifs** : Nova Protect France, NovaProtect Lyon
 - **Statut** : Courtier en assurances
 - **ORIAS** : n° 07 022 045
 - **Régulateur** : ACPR (Autorité de Contrôle Prudentiel et de Résolution)
@@ -107,7 +107,7 @@ Plusieurs solutions existent : la conduite accompagnée (réduit la surprime de 
 - Assurance Animaux : https://novaprotect.site/animaux
 - Blog : https://novaprotect.site/blog
 - À propos : https://novaprotect.site/a-propos
-- Nova Protect Insurance (EN) : https://novaprotect.site/nova-protect-insurance
+- Courtier Assurance Lyon : https://novaprotect.site/courtier-assurance-lyon
 - Nova Protect France : https://novaprotect.site/nova-protect-france
 - Mentions légales : https://novaprotect.site/mentions-legales
 - Politique de confidentialité : https://novaprotect.site/politique-de-confidentialite

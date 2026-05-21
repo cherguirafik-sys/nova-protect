@@ -6,14 +6,14 @@ import { CheckCircle, Shield, Phone } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Mutuelle Animaux - Assurance Chien & Chat | NovaProtect",
+  title: "Mutuelle Animaux Lyon & France - Assurance Chien & Chat | NovaProtect",
   description:
-    "Protégez votre chien ou chat avec notre mutuelle animaux : consultations, chirurgie, médicaments, forfait prévention. Jusqu'à 100% remboursé. Devis gratuit.",
+    "Courtier mutuelle animaux à Lyon et en France : assurance chien et chat, consultations, chirurgie, médicaments, forfait prévention. Devis gratuit.",
   alternates: {
     canonical: "https://novaprotect.site/animaux",
   },
   openGraph: {
-    title: "Mutuelle Animaux - Chien & Chat | NovaProtect",
+    title: "Mutuelle Animaux Lyon & France | NovaProtect",
     description:
       "Assurance santé animaux : consultations vétérinaires, chirurgie, vaccins. Jusqu'à 100% de remboursement. Courtier agréé ORIAS.",
     url: "https://novaprotect.site/animaux",
@@ -28,6 +28,9 @@ export const metadata: Metadata = {
     "mutuelle chien chat",
     "NovaProtect animaux",
     "assurance santé animaux",
+    "assurance animaux Lyon",
+    "mutuelle chien chat Lyon",
+    "devis assurance animaux Lyon",
   ],
 };
 
@@ -35,9 +38,9 @@ const serviceJsonLd = {
   "@context": "https://schema.org", "@type": "Service",
   name: "Mutuelle Animaux NovaProtect",
   description: "Assurance chien et chat : consultations vétérinaires, chirurgie, médicaments, forfait prévention. Jusqu'à 100% remboursé.",
-  provider: { "@type": "InsuranceAgency", name: "NovaProtect", alternateName: ["Nova Protect", "Nova Protect Insurance"], url: "https://novaprotect.site" },
-  areaServed: { "@type": "Country", name: "France" },
-  serviceType: "Pet Insurance",
+  provider: { "@type": "InsuranceAgency", name: "NovaProtect", alternateName: ["Nova Protect", "NovaProtect Lyon"], url: "https://novaprotect.site" },
+  areaServed: [{ "@type": "City", name: "Lyon" }, { "@type": "Country", name: "France" }],
+  serviceType: "Assurance animaux",
   url: "https://novaprotect.site/animaux",
 };
 

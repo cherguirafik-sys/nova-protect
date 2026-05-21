@@ -6,34 +6,37 @@ import { Shield, CheckCircle, MapPin, Phone, ArrowRight, HeartPulse, Car, Home a
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Nova Protect France — Courtier d'Assurances Partout en France | NovaProtect",
+  title: "Nova Protect France — Courtier d'Assurances basé à Lyon | NovaProtect",
   description:
-    "Nova Protect France, votre courtier d'assurances agréé ORIAS partout en France. Mutuelle Santé, Auto, Habitation, Animaux. Devis gratuit, réponse sous 24h. Nova Protect insurance broker France.",
+    "Nova Protect France, courtier d'assurances agréé ORIAS basé à Lyon. Mutuelle santé, auto, habitation et animaux partout en France. Devis gratuit sous 24h.",
   alternates: { canonical: "https://novaprotect.site/nova-protect-france" },
   openGraph: {
-    title: "Nova Protect France — Courtier d'Assurances Agréé sur Toute la France",
-    description: "Nova Protect, courtier agréé ORIAS n° 07 022 045. Assurances Mutuelle Santé, Auto, Habitation et Animaux partout en France.",
+    title: "Nova Protect France — Courtier d'Assurances Agréé basé à Lyon",
+    description: "Nova Protect, courtier agréé ORIAS n° 07 022 045 basé à Lyon. Mutuelle santé, auto, habitation et animaux partout en France.",
     url: "https://novaprotect.site/nova-protect-france",
     type: "website",
   },
   keywords: [
-    "nova protect france", "nova protect assurance", "nova protect insurance", "courtier assurance france",
+    "nova protect france", "nova protect assurance", "nova protect lyon", "courtier assurance france",
     "assurance france entière", "courtier agréé france", "NovaProtect france", "assurance mutuelle france",
-    "assurance auto france", "assurance habitation france", "courtier ORIAS france",
+    "assurance auto france", "assurance habitation france", "courtier ORIAS france", "courtier assurance Lyon",
+    "mutuelle santé Lyon", "devis assurance Lyon",
   ],
 };
 
 const orgJsonLd = {
   "@context": "https://schema.org", "@type": "InsuranceAgency",
-  name: "NovaProtect", alternateName: ["Nova Protect", "Nova Protect France", "Nova Protect Insurance"],
+  name: "NovaProtect", alternateName: ["Nova Protect", "Nova Protect France", "NovaProtect Lyon"],
   url: "https://novaprotect.site", logo: "https://novaprotect.site/logo.png",
-  description: "Nova Protect France — Courtier d'assurances agréé ORIAS, spécialisé en Mutuelle Santé, Auto, Habitation et Animaux sur tout le territoire français.",
+  description: "Nova Protect France — Courtier d'assurances agréé ORIAS basé à Lyon, spécialisé en mutuelle santé, auto, habitation et animaux sur le territoire français.",
   telephone: "+33780180414", email: "contact@novaprotect.site",
-  address: { "@type": "PostalAddress", streetAddress: "5 rue de Seze", addressLocality: "Lyon", postalCode: "69006", addressCountry: "FR" },
+  address: { "@type": "PostalAddress", streetAddress: "5 rue de Seze", addressLocality: "Lyon", addressRegion: "Auvergne-Rhône-Alpes", postalCode: "69006", addressCountry: "FR" },
   areaServed: [
+    { "@type": "City", name: "Lyon" },
+    { "@type": "AdministrativeArea", name: "Métropole de Lyon" },
     { "@type": "Country", name: "France" },
-    { "@type": "AdministrativeArea", name: "Île-de-France" },
     { "@type": "AdministrativeArea", name: "Auvergne-Rhône-Alpes" },
+    { "@type": "AdministrativeArea", name: "Île-de-France" },
     { "@type": "AdministrativeArea", name: "Provence-Alpes-Côte d'Azur" },
     { "@type": "AdministrativeArea", name: "Nouvelle-Aquitaine" },
     { "@type": "AdministrativeArea", name: "Occitanie" },
@@ -44,8 +47,8 @@ const orgJsonLd = {
 const faqJsonLd = {
   "@context": "https://schema.org", "@type": "FAQPage",
   mainEntity: [
-    { "@type": "Question", name: "Nova Protect est-il disponible partout en France ?", acceptedAnswer: { "@type": "Answer", text: "Oui, Nova Protect opère sur l'ensemble du territoire français. De Paris à Marseille, de Lyon à Bordeaux, en passant par Toulouse, Nantes, Strasbourg et toutes les villes de France, nos services d'assurance sont accessibles en ligne." }},
-    { "@type": "Question", name: "Qu'est-ce que Nova Protect France ?", acceptedAnswer: { "@type": "Answer", text: "Nova Protect France (NovaProtect) est un courtier d'assurances agréé ORIAS n° 07 022 045, basé à Lyon et opérant sur toute la France. Nous proposons des assurances Mutuelle Santé, Auto, Habitation et Animaux aux meilleures garanties." }},
+    { "@type": "Question", name: "Nova Protect est-il disponible partout en France ?", acceptedAnswer: { "@type": "Answer", text: "Oui, Nova Protect opère sur l'ensemble du territoire français depuis Lyon. Nos services d'assurance sont accessibles en ligne pour la mutuelle santé, l'auto, l'habitation et les animaux." }},
+    { "@type": "Question", name: "Qu'est-ce que Nova Protect France ?", acceptedAnswer: { "@type": "Answer", text: "Nova Protect France (NovaProtect) est un courtier d'assurances agréé ORIAS n° 07 022 045, basé à Lyon. Nous proposons des assurances mutuelle santé, auto, habitation et animaux aux meilleures garanties." }},
     { "@type": "Question", name: "Comment obtenir un devis chez Nova Protect France ?", acceptedAnswer: { "@type": "Answer", text: "Rendez-vous sur novaprotect.site, choisissez votre type d'assurance et remplissez le formulaire. Un conseiller dédié vous recontacte sous 24h. Vous pouvez aussi nous joindre par WhatsApp au +33 7 80 18 04 14." }},
   ],
 };
@@ -59,8 +62,8 @@ const breadcrumbJsonLd = {
 };
 
 const regions = [
-  { name: "Île-de-France", cities: "Paris, Versailles, Boulogne" },
   { name: "Auvergne-Rhône-Alpes", cities: "Lyon, Grenoble, Saint-Étienne" },
+  { name: "Île-de-France", cities: "Versailles, Boulogne, Créteil" },
   { name: "Provence-Alpes-Côte d'Azur", cities: "Marseille, Nice, Toulon" },
   { name: "Nouvelle-Aquitaine", cities: "Bordeaux, Limoges, Poitiers" },
   { name: "Occitanie", cities: "Toulouse, Montpellier, Nîmes" },
@@ -144,7 +147,7 @@ export default function NovaProtectFrancePage() {
         <div className="container mx-auto px-4 max-w-6xl">
           <h2 className="text-3xl md:text-4xl font-extrabold text-brand-navy mb-6 uppercase tracking-tight text-center">Nova Protect couvre <span className="text-brand-green">toute la France</span></h2>
           <p className="text-lg text-brand-text-medium text-center mb-12 max-w-3xl mx-auto">
-            Que vous soyez à Paris, Lyon, Marseille, Bordeaux ou dans n&apos;importe quelle autre ville française, Nova Protect vous accompagne pour trouver l&apos;assurance idéale au meilleur prix.
+            Basé à Lyon, Nova Protect vous accompagne aussi à Marseille, Bordeaux, Toulouse et dans n&apos;importe quelle autre ville française pour trouver l&apos;assurance idéale au meilleur prix.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {regions.map(r => (
@@ -187,7 +190,7 @@ export default function NovaProtectFrancePage() {
           <h2 className="text-3xl md:text-4xl font-extrabold text-brand-navy mb-12 uppercase tracking-tight text-center">Questions <span className="text-brand-green">Fréquentes</span></h2>
           <div className="space-y-6">
             {[
-              { q: "Nova Protect est-il disponible partout en France ?", a: "Oui, Nova Protect opère sur tout le territoire français. De Paris à Marseille, de Lyon à Bordeaux, nos services sont 100% en ligne et accessibles partout." },
+              { q: "Nova Protect est-il disponible partout en France ?", a: "Oui, Nova Protect opère sur tout le territoire français depuis Lyon. Nos services sont 100% en ligne et accessibles partout." },
               { q: "Qu'est-ce que Nova Protect France ?", a: "Nova Protect France (NovaProtect) est un courtier d'assurances agréé ORIAS n° 07 022 045, basé à Lyon. Nous proposons Mutuelle Santé, Auto, Habitation et Animaux aux meilleures garanties." },
               { q: "Comment contacter Nova Protect France ?", a: "Par téléphone : +33 7 80 18 04 14, par email : contact@novaprotect.site, ou via le formulaire de devis gratuit sur novaprotect.site." },
             ].map(item => (

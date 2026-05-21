@@ -20,6 +20,8 @@ export default function Footer() {
             <Link href="/habitation" className="hover:text-white transition-colors">Assurance Habitation</Link>
             <span className="text-white/20">•</span>
             <Link href="/animaux" className="hover:text-white transition-colors">Assurance Animaux</Link>
+            <span className="text-white/20">•</span>
+            <Link href="/courtier-assurance-lyon" className="hover:text-white transition-colors">Courtier Assurance Lyon</Link>
           </div>
         </nav>
 
@@ -54,6 +56,7 @@ export default function Footer() {
           <Link href="/politique-de-confidentialite" className="hover:text-white transition-colors">Politique de Confidentialité</Link>
           <Link href="/a-propos" className="hover:text-white transition-colors">À Propos</Link>
           <Link href="/blog" className="hover:text-white transition-colors">Blog</Link>
+          <Link href="/nova-protect-france" className="hover:text-white transition-colors">Nova Protect France</Link>
           <a href="mailto:contact@novaprotect.site" className="hover:text-white transition-colors">contact@novaprotect.site</a>
         </nav>
     <p className="text-sm text-brand-text-medium mt-8">© 2026 Nova Protect (NovaProtect). Tous droits réservés.</p>

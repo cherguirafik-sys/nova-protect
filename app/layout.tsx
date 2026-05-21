@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 const SITE_URL = "https://novaprotect.site";
 const SITE_NAME = "NovaProtect";
 const DEFAULT_DESCRIPTION =
-  "NovaProtect, votre courtier d'assurances de confiance. Comparez et souscrivez vos assurances Mutuelle Santé, Auto, Habitation et Animaux aux meilleures garanties. Devis gratuit en ligne, réponse sous 24h. ORIAS n° 07 022 045.";
+  "NovaProtect, courtier d'assurances agréé ORIAS n° 07 022 045 basé à Lyon. Comparez vos mutuelles santé, assurances auto, habitation et animaux en France. Devis gratuit en ligne, réponse sous 24h.";
 
 export const metadata: Metadata = {
   // ─── Base URL ────────────────────────────────────────
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 
   // ─── Title (template applies to child pages) ─────────
   title: {
-    default: "NovaProtect | Courtier Assurances Mutuelle Santé, Auto, Habitation, Animaux",
+    default: "NovaProtect | Courtier Assurance Lyon & France",
     template: "%s | NovaProtect",
   },
 
@@ -34,10 +34,8 @@ export const metadata: Metadata = {
   keywords: [
     "NovaProtect",
     "Nova Protect",
-    "nova protect insurance",
     "nova protect france",
-    "insurance in france",
-    "insurance broker france",
+    "nova protect lyon",
     "assurance",
     "mutuelle santé",
     "assurance auto",
@@ -45,15 +43,26 @@ export const metadata: Metadata = {
     "assurance animaux",
     "courtier assurance",
     "courtier assurance France",
+    "courtier assurance Lyon",
     "courtier agréé",
+    "courtier ORIAS Lyon",
     "devis assurance gratuit",
+    "devis assurance Lyon",
     "comparer assurances",
     "mutuelle pas cher",
     "meilleure mutuelle",
+    "mutuelle santé Lyon",
+    "complémentaire santé Lyon",
     "assurance en ligne",
     "ORIAS",
     "assurance Lyon",
     "courtier Lyon",
+    "assurance auto Lyon",
+    "assurance habitation Lyon",
+    "assurance animaux Lyon",
+    "mutuelle chien chat Lyon",
+    "assurance jeune conducteur Lyon",
+    "assurance logement Lyon",
     "assurance France",
     "devis mutuelle",
     "devis auto",
@@ -83,14 +92,10 @@ export const metadata: Metadata = {
   },
 
   // ─── Canonical & Alternates ─────────────────────────
-  // hreflang: do NOT include a self-referencing fr-FR alternate when
-  // canonical already points to "/". Only list the non-default language
-  // alternate to avoid the "alternate link pointing to itself is invalid" error.
   alternates: {
     canonical: "https://novaprotect.site/",
     languages: {
-      "fr": "https://novaprotect.site/",
-      "en": "https://novaprotect.site/nova-protect-insurance",
+      "fr-FR": "https://novaprotect.site/",
       "x-default": "https://novaprotect.site/",
     },
   },
@@ -117,7 +122,7 @@ export const metadata: Metadata = {
     locale: "fr_FR",
     url: SITE_URL,
     siteName: SITE_NAME,
-    title: "NovaProtect - Optimisez Votre Protection avec Nos Assurances Personnalisées",
+    title: "NovaProtect - Courtier d'Assurances à Lyon et en France",
     description: DEFAULT_DESCRIPTION,
     images: [
       {
@@ -133,13 +138,13 @@ export const metadata: Metadata = {
   // ─── Twitter Card ───────────────────────────────────
   twitter: {
     card: "summary_large_image",
-    title: "NovaProtect - Assurances Mutuelle Santé, Auto, Habitation, Animaux",
+    title: "NovaProtect - Courtier Assurance Lyon & France",
     description: DEFAULT_DESCRIPTION,
     images: ["/logo.png"],
   },
 
   // ─── Category ───────────────────────────────────────
-  category: "Insurance",
+  category: "Assurance",
 
   // ─── Other Meta Tags ────────────────────────────────
   other: {

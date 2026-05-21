@@ -6,14 +6,14 @@ import { CheckCircle, Shield, HeartPulse, Phone } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Mutuelle Santé - Couverture Complète & Personnalisée | NovaProtect",
+  title: "Mutuelle Santé Lyon & France - Couverture Personnalisée | NovaProtect",
   description:
-    "Découvrez nos mutuelles santé sur-mesure : optique, dentaire, hospitalisation, médecine douce. Remboursements sous 48h. Sans questionnaire médical. Devis gratuit.",
+    "Courtier mutuelle santé à Lyon et en France : optique, dentaire, hospitalisation, médecine douce. Sans questionnaire médical. Devis gratuit sous 24h.",
   alternates: {
     canonical: "https://novaprotect.site/mutuelles",
   },
   openGraph: {
-    title: "Mutuelle Santé Personnalisée | NovaProtect",
+    title: "Mutuelle Santé Lyon & France | NovaProtect",
     description:
       "Couverture santé complète : optique, dentaire, hospitalisation. Remboursements rapides sous 48h. Courtier agréé ORIAS.",
     url: "https://novaprotect.site/mutuelles",
@@ -28,6 +28,9 @@ export const metadata: Metadata = {
     "mutuelle sans questionnaire médical",
     "NovaProtect mutuelle",
     "courtier mutuelle Lyon",
+    "mutuelle santé Lyon",
+    "complémentaire santé Lyon",
+    "devis mutuelle Lyon",
   ],
 };
 
@@ -35,9 +38,9 @@ const serviceJsonLd = {
   "@context": "https://schema.org", "@type": "Service",
   name: "Mutuelle Santé NovaProtect",
   description: "Couverture santé complète et personnalisée : optique, dentaire, hospitalisation, médecines douces. Remboursements sous 48h. Sans questionnaire médical.",
-  provider: { "@type": "InsuranceAgency", name: "NovaProtect", alternateName: ["Nova Protect", "Nova Protect Insurance"], url: "https://novaprotect.site" },
-  areaServed: { "@type": "Country", name: "France" },
-  serviceType: "Health Insurance",
+  provider: { "@type": "InsuranceAgency", name: "NovaProtect", alternateName: ["Nova Protect", "NovaProtect Lyon"], url: "https://novaprotect.site" },
+  areaServed: [{ "@type": "City", name: "Lyon" }, { "@type": "Country", name: "France" }],
+  serviceType: "Mutuelle santé",
   url: "https://novaprotect.site/mutuelles",
 };
 

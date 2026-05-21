@@ -5,6 +5,11 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
+        source: "/nova-protect-insurance",
+        destination: "/nova-protect-france",
+        permanent: true,
+      },
+      {
         source: "/:path*",
         has: [{ type: "host", value: "www.novaprotect.site" }],
         destination: "https://novaprotect.site/:path*",
